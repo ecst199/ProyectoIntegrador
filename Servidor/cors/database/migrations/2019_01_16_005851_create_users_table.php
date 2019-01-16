@@ -23,7 +23,8 @@ class CreateUsersTable extends Migration
             $table->integer('draws');
             $table->dateTime('lastPlay');
             $table->string('password');
-            
+            $table->integer('imageId')->unsigned();
+            $table->foreign('imageId')->references('id')->on('images');
             //'name', 'email', 'wins', 'loses', 'draws', 'lastPlay','password',
         });
     }

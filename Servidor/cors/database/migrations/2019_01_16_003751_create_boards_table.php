@@ -20,7 +20,9 @@ class CreateBoardsTable extends Migration
             $table->dateTime('beginTime');
             $table->dateTime('endTime');
             $table->string('row',2);
-            $table->string('column',2);            
+            $table->string('column',2);        
+            $table->integer('statesId')->unsigned();
+            $table->foreign('statesId')->references('id')->on('states');    
         });
     }
 

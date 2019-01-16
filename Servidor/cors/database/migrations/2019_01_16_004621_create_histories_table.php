@@ -20,7 +20,9 @@ class CreateHistoriesTable extends Migration
             $table->dateTime('beginDate');
             $table->dateTime('endDate');
             $table->integer('moveNumber');
-            $table->string('turn');            
+            $table->string('turn');         
+            $table->integer('boardId')->unsigned();
+            $table->foreign('boardId')->references('id')->on('boards');   
         });
     }
 
