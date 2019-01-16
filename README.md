@@ -1,1 +1,1 @@
-# ProyectoIntegrador
+El presente proyecto se enfoca en una juego movil desarrolado en ionic con base de datos en mysql server y cuenta con el servicio web de lumen 
