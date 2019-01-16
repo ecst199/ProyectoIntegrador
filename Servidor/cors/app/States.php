@@ -1,19 +1,18 @@
 <?php
-
-namespace app;
-
+namespace App;
 use Illuminate\Database\Eloquent\Model;
-
-
-class Player extends Model
-{
+class States extends Model 
+{   
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    //
     protected $fillable = [
-        'name', 'image', 'status', 'email', 'move',
+        'description', 
     ];
+    public function Board()
+    {
+        return $this->belongsTo('App\Board');
+    }
 }

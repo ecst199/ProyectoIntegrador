@@ -13,7 +13,15 @@ class Board extends Model
      * @var array
      */
     //
-    protected $fillable = [
-        'row', 'column',
+    protected $fillable = [       
+        'beginPosition', 'beginTime', 'endTime', 'row', 'column',
     ];
+    public function histories()
+    {
+        return $this->belongsTo('App\Histories');
+    }
+    public function states()
+    {
+        return $this->hasMany('App\States');
+    }
 }
