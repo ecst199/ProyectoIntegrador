@@ -23,7 +23,7 @@
       <td class="chessboard"><i class="black fas fa-chess-queen ml-4"></i></td>
       <td class="chessboard"><i class="black fas fa-chess-bishop ml-4"></i></td>
       <td class="chessboard"><i class="black fas fa-chess-knight ml-4"></i></td>
-      <td class="chessboard"><i class="black fas fa-chess-rook ml-4"></i></td>
+      <th class="border"><span class="black fas fa-chess-rook fa-1x"></span></th><th class="captured-space"><i *ngFor="let piece of board.blackRookCaps" class="{{piece.image}} ml-2"></i></th>
     </tr>
     <tr class="chessboard">
       <td class="chessboard"><i class="black fas fa-chess-pawn ml-4"></i></td>
